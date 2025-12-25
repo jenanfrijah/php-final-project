@@ -1,0 +1,1 @@
+sends you back to either the log in page or the landing page
