@@ -55,13 +55,13 @@ function login($user_id,$first_name,$last_name,$email,$location='',$role='user')
 
 function logout(){
 
-    $_SESSION =array();
+    $_SESSION =array(); //Delete all data in the session
     
-    if(isset($_COOKIE[session_name()])){
+    if(isset($_COOKIE[session_name()])){ //session name بترجع اسم ال cookie 
         setcookie(session_name(),'',time()-3600,'/');
     }
 
-    session_destroy();
+    session_destroy(); // delete it completly from the server 
 }
 
 function requireLogin ($redirectURL='public/login.php'){
